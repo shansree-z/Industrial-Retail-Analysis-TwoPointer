@@ -47,7 +47,7 @@ print(f"--- PEAK PRODUCT DISCOVERED ---\n{peak}") ```
 ## 📊 Sample Output
 When executed, the algorithm scans the 540k rows and identifies the following peak transaction burst:
 
-```text
+
 --- PEAK PRODUCT DISCOVERED ---
 Time                 Description                         Quantity
 2011-12-09 09:15:00  PAPER CRAFT , LITTLE BIRDIE         80995
