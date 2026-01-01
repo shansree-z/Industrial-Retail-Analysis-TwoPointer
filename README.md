@@ -26,6 +26,7 @@ This analysis uses the **UCI Machine Learning E-Commerce Dataset** (UK-based ret
 * **Download Method:** Automated via `kagglehub`.
 * **Data Points:** InvoiceDate, Description, Quantity, UnitPrice, CustomerID.
 
+
 ## 🛠️ Implementation
 
 ```python
@@ -41,4 +42,15 @@ df['Time'] = pd.to_datetime(df['InvoiceDate'])
 # 3. Two-Pointer / Sliding Window Aggregation
 peak = df.groupby(['Time', 'Description'])['Quantity'].sum().sort_values(ascending=False).head(1)
 
-print(f"--- PEAK PRODUCT DISCOVERED ---\n{peak}")
+print(f"--- PEAK PRODUCT DISCOVERED ---\n{peak}") ```
+
+## 📊 Sample Output
+When executed, the algorithm scans the 540k rows and identifies the following peak transaction burst:
+
+```text
+--- PEAK PRODUCT DISCOVERED ---
+Time                 Description                         Quantity
+2011-12-09 09:15:00  PAPER CRAFT , LITTLE BIRDIE         80995
+Name: Quantity, dtype: int64
+
+
